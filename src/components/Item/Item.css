@@ -1,0 +1,31 @@
+.CardItem {
+    display: flex;
+    flex-direction: column;
+}
+
+.CardItem h2 {
+    font-size: 1rem;
+    font-family: 'Kumbh Sans', sans-serif;
+    color: #291E3E;
+    font-weight: 400;
+
+}
+.CardItem-price{
+    font-size: 1.5rem;
+    font-family: 'Kumbh Sans', sans-serif;
+    color: #291E3E;
+    font-weight: 800;
+    position: relative;
+}
+
+.CardItem-price::before {
+ content: '$';
+ font-size: 1rem;   
+}
+
+
+img.CardItem-img {
+    width: 80%;
+    margin: auto;
+}
+

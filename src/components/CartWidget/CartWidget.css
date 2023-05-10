@@ -1,0 +1,25 @@
+.Cart { 
+background-image: url('./assets/cart.svg') ;
+background-position: center;
+background-size: contain;
+color: #1e1e1e;
+width: 1.8rem;
+height: 1.8rem;
+background-repeat: no-repeat;
+display: flex; 
+align-items:center;
+justify-content: center;
+position: relative;
+}
+
+.Cart.Active { 
+background-image: url('./assets/cart_active.svg') ;
+color: #fff
+}
+
+.Quantity {
+display: flex;
+font-size: .8rem;
+position: absolute;
+bottom: 2px;
+}
