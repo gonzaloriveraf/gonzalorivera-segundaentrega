@@ -3,7 +3,8 @@
     flex-direction: column;
 }
 
-.CardItem h2 {
+.CardItem-Title {
+    margin-top: 1rem;
     font-size: 1rem;
     font-family: 'Kumbh Sans', sans-serif;
     color: #291E3E;
@@ -11,7 +12,7 @@
 
 }
 .CardItem-price{
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     font-family: 'Kumbh Sans', sans-serif;
     color: #291E3E;
     font-weight: 800;
@@ -25,7 +26,7 @@
 
 
 img.CardItem-img {
-    width: 80%;
+    width: 100%;
     margin: auto;
 }
 

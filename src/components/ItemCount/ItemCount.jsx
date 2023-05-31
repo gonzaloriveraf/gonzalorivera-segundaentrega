@@ -1,60 +1,84 @@
-import { useState } from "react";
+import { useState, } from "react";
+//import { useCount } from "./hook/useCount";
 
-const ItemCount = (props) => {
-  const [count, setCount] = useState(props.initial);
+const ItemCount = ({ maxCount, initial, onChangeCount }) => {
+ // const { count, decrement, increment } = useCount(1, 0, maxCount);
+
+  const handlerClick = () => {
+  //  increment();
+    onChangeCount(count);
+
+  };
+
+  const [count, setcount] = useState(initial);
 
   const validation = () => {
     if (count <= 1) {
-      setCount(1);
+      setcount(1);
     }
   };
 
   const onAdd = () => {
-    if (props.stock < count) {
+    if (maxCount < count) {
       alert("No existe suficiente stock para este producto :(");
     } else {
-      alert("Agregado al carrito :) ");
+
     }
+  
+
+    handlerClick()
   };
 
   const increase = () => {
-    if (count < props.stock) {
-      setCount(count + 1);
+    if (count < maxCount) {
+      setcount(count + 1);
     } else {
       alert("No existe suficiente stock para este producto :(");
     }
+
   };
 
   const onChangeTitle = (e) => {
-    setCount(e.target.value);
+    setcount(e.target.value);
   };
 
   return (
     <div className="container  ">
+      
+
       <div className="d-flex justify-content-between">
-        <button className="   Secondary-button w-25"
+        <button
+          className="   Secondary-button w-25"
           onClick={() => {
-            setCount(count - 1);
+            setcount(count - 1);
             validation();
           }}
         >
-          - {" "}
+          -{" "}
         </button>
 
         <input
-          className="text-center  Input-field"
+          className="text-center  FormmInput mx-5"
           type="number"
           value={count}
           onChange={onChangeTitle}
         />
 
-        <button className="Secondary-button w-25" onClick={increase}>  + {"  "}</button>
+        <button className="Secondary-button w-25" onClick={  increase  }>
+          {" "}
+          + {"  "}
+        </button>
 
-        {/* <button onClick={() => setCount(1)}>Reiniciar </button> */}
+        {/* <button onClick={() => setcount(1)}>Reiniciar </button> */}
       </div>
-      <div class="d-block">
-        <button className="Principal-button my-4 " onClick={onAdd}> Agregar al Carrito </button>
+
+      <div className="d-block">
+        <button className="Principal-button my-4 " onClick={ onAdd }  >
+          {" "}
+          Agregar al Carrito{" "}
+        </button>
       </div>
+
     </div>
   );
 };

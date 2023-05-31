@@ -1,47 +1,66 @@
 body * {
-    font-family: 'Kumbh Sans', sans-serif;
-
+  font-family: "Kumbh Sans", sans-serif;
 }
 
 h1 {
-    font-family: 'Italiana', serif;
+  font-family: "Italiana", serif;
+}
+
+h2 {
+  font-weight: 300;
 }
 
 .Principal-button {
-    font-size: 1rem;
-    background-color: #291E3E;
-    text-align: center;
-    font-weight: 500; 
-    color: #fff;
-    text-decoration: none;
-    width: 100%;
-    margin: auto;
-    padding: .25rem .5rem;
-    border-radius: .25rem;
-    border:none;
-    }
-    
+  font-size: 1rem;
+  background-color: #291e3e;
+  text-align: center;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  width: 100%;
+  margin: auto;
+  padding: .75rem 0.5rem;
+  border-radius: 0.25rem;
+  border: none;
+}
 
-    .Secondary-button {
-        font-size: 1rem;
-        background-color: #F1DFEA;
-        border: solid 1px #F1DFEA;
-        text-align: center;
-        font-weight: 800; 
-        color: #291E3E;
-        text-decoration: none;
-        width: 100%;
-        margin: auto;
-        padding: .25rem .5rem;
-        border-radius: .25rem;
+.Secondary-button {
+  font-size: 1rem;
+  background-color: #f7ebf2;
+  border: solid 1px #f7ebf2;
+  text-align: center;
+  font-weight: 800;
+  color: #291e3e;
+  text-decoration: none;
+  width: 100%;
+  margin: auto;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+}
 
-        }
-    .Input-field {
-        border: none;
-        font-size: 1rem;
-        font-weight: bolder;
-        padding: .25rem;
-        border: solid 1px #ededed;
-        
 
-    }
+
+.FormmInput{
+  width: 100%;
+  border: 0;
+  border-bottom: solid 1px;
+  outline: none;
+  padding: 0.25rem;
+  font-weight: bolder;  
+  font-size: 1rem;
+  }
+
+  .Link {
+   font-weight: 500;
+   text-decoration: underline;
+   font-size: 1rem; 
+   color: #291e3e;
+   cursor: pointer;
+  }
+  .Title {
+    font-size: 1.75rem;
+    font-family: 'Kumbh Sans', sans-serif;
+    color: #291E3E;
+    font-weight: 300;
+
+}

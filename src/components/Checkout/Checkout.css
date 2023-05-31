@@ -1,0 +1,14 @@
+
+.CheckoutForm {
+    margin-bottom: 3rem;
+}
+
+.CheckoutForm label {
+    width: 30%;
+    color: #999
+}
+
+.Checkout .CartItem-delete {
+    display: none;
+}
+
