@@ -4,6 +4,7 @@ import { createOrder } from "../../utils/createUpdateFirestore";
 import { useContext, useState } from "react";
 import { CartContext } from "../../context/CartContext";
 import Cart from "../Cart";
+import Success from "../Success";
 
 const Checkout = () => {
   const { cart, clearCart, getTotal, deleteFromCart } = useContext(CartContext);
@@ -60,10 +61,7 @@ const Checkout = () => {
             className="FormmInput"
           />
            </div>
-           <button className="Principal-button" onClick={createOrderHandler}>
-            {" "}
-            Comprar{" "}
-          </button>
+
         </div>
         <div className="col-12 col-md-3 flex-columnn ">
           <div className="d-flex flex-row justify-content-between"><h4>Carro </h4>          <Link className="Link" to={"/cart"}>Editar el carro </Link></div>
@@ -71,9 +69,16 @@ const Checkout = () => {
           <Cart />
 
           <h4 className="CartContainerTotal my-3">Total: ${getTotal()} </h4>
-        
+       <Link to={'/success'} state={{ nombre: firstName , direccion: adress, carro: cart, mail : email }}>   <button className="Principal-button" onClick={createOrderHandler}>    Comprar </button>
+       </Link>
+
+
+       
+
         </div>
       </div>
+
+   
     </div>
   );
 };

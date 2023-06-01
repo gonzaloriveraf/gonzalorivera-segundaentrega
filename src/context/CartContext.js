@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
 
 export const CartContext = createContext({
   cart: [],
@@ -6,6 +6,7 @@ export const CartContext = createContext({
 
 export const CartContextProvider = ({ defaultValue = [], children }) => {
   const [cart, setCart] = useState(defaultValue);
+  const [cartPreview, setCartPreview] = useState(true)
 
   console.log(cart);
 
@@ -53,12 +54,16 @@ export const CartContextProvider = ({ defaultValue = [], children }) => {
     return total;
   };
 
+
+
   const displayCartContainer = () => {
     const CartContainer = document.querySelector('.CartContainer')
-    CartContainer.classList.toggle('d-none')
+    CartContainer.classList.toggle('d-none') 
+
+    }
+
 
     
-    }
 
 
     const deleteFromCart = (id) => {

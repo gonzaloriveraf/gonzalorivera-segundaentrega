@@ -3,11 +3,10 @@ import ItemCount from "../ItemCount";
 import "./ItemDetail.css";
 import Spinner from "../Spinner";
 import { CartContext } from "../../context/CartContext";
-import { createOrder } from "../../utils/createUpdateFirestore";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
-const ItemDetail = ({  }) => {
-  const { addItem, displayCartContainer, cart } = useContext(CartContext);
+const ItemDetail = () => {
+  const { addItem, displayCartContainer } = useContext(CartContext);
   const { state } = useLocation();
   const { id, name, img, category, price, stock , description  } = state;
 
@@ -21,14 +20,7 @@ const ItemDetail = ({  }) => {
 
     addItem(item, count);
 
-    createOrder(cart).then((result) => {
-      alert(`Se ha generado la orden ${result} `);
-      console.log(result);
-    });
 
-    const handlerCount = (count) => {
-      addItem(count);
-    };
 
     displayCartContainer();
   };

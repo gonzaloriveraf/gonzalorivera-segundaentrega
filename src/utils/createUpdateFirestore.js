@@ -21,10 +21,13 @@ export const createOrder = async (items, total, name, email, adress) => {
   const db = getFirestore()   
   const orderCollection = collection(db, 'orders')
   addDoc(orderCollection,order).then(({ id }) => {
+    console.log(order)
    return id ;
   } )
 
 };
+
+
 
 // export const updateOrder = async (id) => {
 // const db = getFirestore(); 

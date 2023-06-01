@@ -1,0 +1,58 @@
+.Banner-container {
+  border-bottom: solid 1px #ededed;
+}
+
+.HomeItem-Title {
+  font-size: 1.2rem;
+  color: #291e3e;
+  font-weight: 400;
+  text-decoration: none;
+  width: 100%;
+  text-align: left;
+  text-decoration: none;
+  width: 100%;
+  position: absolute;
+  right: 0;
+  left: 12rem;
+
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+
+.HomeItem {
+  background-color: rgba(247, 189, 222, 0.2);
+  padding: 1rem;
+  border-radius: 50%;
+  margin: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+  width: 14rem;
+  height: 14rem;
+position: relative;
+}
+
+.HomeItem:hover {
+  padding: 0;
+  font-weight: 600;
+}
+.HomeItem:hover .HomeItem-Title {
+  font-weight: 600;
+  margin-left: -2rem;
+
+}
+.HomeItem-img {
+  margin-left: 0rem;
+  mix-blend-mode: multiply;
+  position: absolute;
+  bottom: -1rem
+}

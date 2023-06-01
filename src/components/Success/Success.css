@@ -1,0 +1,26 @@
+.Success .CartItem-delete  {
+    display: none;
+
+
+}
+
+.Success .ItemsContainer {
+
+    overflow: hidden;
+    height: 100%;
+}
+
+ .SuccessTotal {
+
+    text-align: left;
+    width: 100%;
+    font-size: 1.5rem;
+    font-family: 'Kumbh Sans', sans-serif;
+    color: #291E3E;
+    font-weight: 500;
+    position: relative;
+}
+.Success .CartTotal {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}

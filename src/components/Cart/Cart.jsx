@@ -1,22 +1,27 @@
 import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
-import { Link } from "react-router-dom";
-import iconDelete from "./asset/trash-2.svg"
+
+
 
 import "./Cart.css";
+import CartEmpty from "../CartEmpty";
 
 const Cart = () => {
-  const { cart, clearCart, getTotal, deleteFromCart } = useContext(CartContext);
+  const { cart,  getTotal, deleteFromCart } = useContext(CartContext);
 
   return cart.length < 1 ? (
-    <h4>no hay nada por aqui</h4>
+ 
+    <CartEmpty/> 
+
+
   ) : (
+    <>
     <div className="container ItemsContainer">
-      <div className=" d-flex flex-column row">
+      <div className=" d-flex flex-column row ItemsScrolled">
         {cart.map((e) => (
           <>
             <div className="CartItem ">
-              <img className="CartItem-img " src={e.item.img} />
+              <img className="CartItem-img " alt={e.item.name} src={e.item.img} />
 
               <div>
                 <div className="CartItem-name "> {e.item.name} </div>
@@ -29,14 +34,17 @@ const Cart = () => {
                 <div className="CartItem-price"> ${e.item.price} </div>
               </div>
 
-              <a className="CartItem-delete Link" onClick={() => deleteFromCart(e.item.id)}>  Eliminar  </a>
+              <a href={'/'} className="CartItem-delete Link" onClick={() => deleteFromCart(e.item.id)}>  Eliminar  </a>
             </div>
           </>
         ))}{" "}
       </div>
 
-      <h3 className="CartTotal"> Total: ${getTotal()} </h3>
     </div>
+
+    
+      <h3 className="CartTotal"> Total: ${getTotal()} </h3>
+    </>
   );
 };
 
