@@ -34,7 +34,7 @@ const Cart = () => {
                 <div className="CartItem-price"> ${e.item.price} </div>
               </div>
 
-              <a href={'/'} className="CartItem-delete Link" onClick={() => deleteFromCart(e.item.id)}>  Eliminar  </a>
+              <a href={'#/'} className="CartItem-delete Link" onClick={() => deleteFromCart(e.item.id)}>  Eliminar  </a>
             </div>
           </>
         ))}{" "}

@@ -1,21 +1,17 @@
 import Cart from "../Cart";
 import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
-import { createOrder } from "../../utils/createUpdateFirestore";
+
 import { Link } from "react-router-dom";
 import "./CartContainer.css";
 import CartEmpty from "../CartEmpty";
 import iconDelete from "../Cart/asset/trash-2.svg"
 const CartContainer = () => {
-  const { cart, clearCart, getTotal, deleteFromCart } = useContext(CartContext);
+  const { cart, clearCart, getTotal } = useContext(CartContext);
 
   console.log(cart);
-  const createOrderHandler = () => {
-    createOrder(cart).then((result) => {
-      alert(`Se ha generado la orden ${result} `);
-      console.log(result);
-    });
-  };
+
+
 
   return cart.length < 1 ? (
 
@@ -43,7 +39,7 @@ const CartContainer = () => {
 
 <div className="my-4 text-center ">
 
-            <a className="Link" onClick={clearCart} > <img src={iconDelete}/>  Vaciar el carro</a></div>
+            <a className="Link" href={"#/"} onClick={clearCart} > <img alt={"icon-delete"} src={iconDelete}/>  Vaciar el carro</a></div>
       
           </div>
       </div>

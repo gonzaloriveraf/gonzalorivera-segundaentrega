@@ -4,10 +4,10 @@ import { createOrder } from "../../utils/createUpdateFirestore";
 import { useContext, useState } from "react";
 import { CartContext } from "../../context/CartContext";
 import Cart from "../Cart";
-import Success from "../Success";
+
 
 const Checkout = () => {
-  const { cart, clearCart, getTotal, deleteFromCart } = useContext(CartContext);
+  const { cart, getTotal } = useContext(CartContext);
 
   const total = getTotal();
 
@@ -17,7 +17,6 @@ const Checkout = () => {
 
   const createOrderHandler = () => {
     createOrder(cart, total, firstName, email, adress).then((result) => {
-      alert(`Se ha generado la orden ${result} `);
       console.log(result);
     });
   };

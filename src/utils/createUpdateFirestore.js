@@ -29,11 +29,6 @@ export const createOrder = async (items, total, name, email, adress) => {
 
 
 
-// export const updateOrder = async (id) => {
-// const db = getFirestore(); 
-// const orderDoc = doc(db , "orders" , "xuyP4F5NuuuBwJRsCVGV" )
-// updateDoc(orderDoc { total: })
-// }
 
 
 
